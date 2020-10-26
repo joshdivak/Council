@@ -1,0 +1,99 @@
+/* * {
+    padding: 10;
+    margin: 0;
+    box-sizing: border-box;
+} */
+body {
+    background: #f8b195
+}
+/* .card{
+    width:180px;
+    height:240px;
+    border:1px solid #151718;
+    float:left;
+    margin-right:50px;
+    margin-bottom:5px;
+    border-radius:2px;
+    font-family:courier;
+    cursor:pointer;
+    text-align: center;
+    background: white
+} */
+.test{
+    width:180px;
+    height:240px;
+    border:1px solid #151718;
+    float:left;
+    margin-right:50px;
+    margin-bottom:5px;
+    border-radius:2px;
+    font-family:courier;
+    cursor:pointer;
+    text-align: center;
+    background: white
+}
+.card{
+    width:180px;
+    height:240px;
+    display: inline-block;
+    perspective: 1000px;
+    margin: 10px;
+}
+.flip{
+    position:relative;
+    transition: transform .3s;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+.card:hover .flip{
+    transform: rotateY(-180deg);
+}
+.front, .back{
+    border-radius:20px;
+    position: absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+}
+.front{
+    background-color:#C8BFE5;
+    transform: rotateY(180deg);
+    
+}
+.back{
+    background-color:#99D9E9;
+}
+.placeholder {
+    width:180px;
+    height:240px;
+    position: relative;
+    background-color: lightgray;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    float: left;
+    text-align: center;
+}
+.deck {
+    width:180px;
+    height:240px;
+    float: right;
+    background-color: lightskyblue;
+}
+.inplay {
+    width:600px;
+    height:260px;
+    /* float:left; */
+    background-color: white;
+    border: black 2px;
+}
+.cardspot {
+    width: 180px;
+    height: 240px;
+    background-color: lightslategray;
+    float: left;
+    margin:10px;
+    /* display: inline; */
+}

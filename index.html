@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Council</h1>
+        <br>
+        <!-- <div class='card'>
+            <div class='flip'>
+                <div class='front' >
+                    <h1>Crisis Units</h1>
+                    <br>
+                    <p>Crisis Units are alternative first-responders who respond to calls that police normally would lalala blalala dsioafoais daskjfals adsfk</p>
+                </div>
+                <div class='back'>                    
+                </div>
+            </div>
+        </div> -->
+        <!-- <div id='test' style="background-color: aliceblue; width:50px;height: 50px; position:relative;" onclick="playCard()"></div> -->
+
+
+        
+        <h2>In Play</h2>
+        <div class="inplay">
+            <div class='cardspot' id="inplay1"></div>
+            <div class='cardspot' id="inplay2"></div>
+            <div class='cardspot' id="inplay3"></div>
+        </div>
+        
+        <div class="deck" onclick="dealCard()">
+            <p style="text-align: center;">DRAW CARD</p>
+        </div>
+        
+        <h2>Your Hand</h2>
+        <div class="hand" style="float: left; padding-top: 20px;">
+            <div class="placeholder" id='p1' onclick="playCard()">
+                <p id="card1"></p>
+            </div>
+            <div class="placeholder" id='p2' onclick="playCard()">
+                <p id="card2"></p>
+            </div>
+            <div class="placeholder" id='p3' onclick="playCard()">
+                <p id="card3"></p>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
