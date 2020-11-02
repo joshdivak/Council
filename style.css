@@ -1,38 +1,8 @@
-/* * {
-    padding: 10;
-    margin: 0;
-    box-sizing: border-box;
-} */
 body {
     background: #f8b195
 }
+/* Flips card */
 /* .card{
-    width:180px;
-    height:240px;
-    border:1px solid #151718;
-    float:left;
-    margin-right:50px;
-    margin-bottom:5px;
-    border-radius:2px;
-    font-family:courier;
-    cursor:pointer;
-    text-align: center;
-    background: white
-} */
-.test{
-    width:180px;
-    height:240px;
-    border:1px solid #151718;
-    float:left;
-    margin-right:50px;
-    margin-bottom:5px;
-    border-radius:2px;
-    font-family:courier;
-    cursor:pointer;
-    text-align: center;
-    background: white
-}
-.card{
     width:180px;
     height:240px;
     display: inline-block;
@@ -65,7 +35,21 @@ body {
 }
 .back{
     background-color:#99D9E9;
+} */
+.test{
+    width:180px;
+    height:240px;
+    border:1px solid #151718;
+    float:left;
+    margin-right:50px;
+    margin-bottom:5px;
+    border-radius:2px;
+    font-family:courier;
+    cursor:pointer;
+    text-align: center;
+    background: white
 }
+
 .placeholder {
     width:180px;
     height:240px;
@@ -75,12 +59,20 @@ body {
     margin-bottom: 10px;
     float: left;
     text-align: center;
+    transition: all .2s ease-in-out; 
+}
+.placeholder:hover {
+    transform: scale(1.1); 
 }
 .deck {
     width:180px;
     height:240px;
     float: right;
     background-color: lightskyblue;
+    transition: all .2s ease-in-out; 
+}
+.deck:hover {
+    transform: scale(1.1); 
 }
 .inplay {
     width:600px;
