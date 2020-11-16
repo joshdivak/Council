@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Council</h1>
-        <br>
-        <!-- Flips card (along with css) -->
-        <!-- <div class='card'>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Council</h1>
+    <br />
+    <!-- Flips card (along with css) -->
+    <!-- <div class='card'>
             <div class='flip'>
                 <div class='front' >
                     <h1>Crisis Units</h1>
@@ -18,23 +18,18 @@
                 </div>
             </div>
         </div> -->
-        <!-- <div id='test' style="background-color: aliceblue; width:50px;height: 50px; position:relative;" onclick="playCard()"></div> -->
+    <!-- <div id='test' style="background-color: aliceblue; width:50px;height: 50px; position:relative;" onclick="playCard()"></div> -->
 
+    <!-- Where played cards move to -->
+    <h2>In Play</h2>
+    <div class="inplay" id="inplay"></div>
 
-        <!-- Where played cards move to -->
-        <h2>In Play</h2>
-        <div class="inplay">
-            <div class='cardspot' id="inplay1"></div>
-            <div class='cardspot' id="inplay2"></div>
-            <div class='cardspot' id="inplay3"></div>
-        </div>
-        
-        <!-- Click on the deck to draw a card -->
-        <div class="deck" onclick="dealCard()">
-            <p style="text-align: center;">DRAW CARD</p>
-        </div>
-        
-        <!-- Manages the player's hand -->
+    <!-- Click on the deck to draw a card -->
+    <div class="deck" onclick="dealCard()">
+      <p style="text-align: center;">DRAW CARD</p>
+  </div>
+
+    <!-- Manages the player's hand -->
         <h2>Your Hand</h2>
         <div class="hand" style="float: left; padding-top: 20px;">
             <div class="placeholder" id='p1' onclick="playCard(this)">

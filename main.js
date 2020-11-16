@@ -1,3 +1,4 @@
+  
 let cards = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
 let player1 = [];
 let player2 = [];
@@ -29,8 +30,8 @@ function dealCard() {
 
 let num = 1;
 function playCard(clickedElement) {
-    let destination = document.getElementById('inplay'+num);
-    let box=clickedElement
+    let destination = document.getElementById('inplay');
+    let box=clickedElement;
     num++;
     destination.appendChild(box);
 }

@@ -1,5 +1,5 @@
 body {
-    background: #f8b195
+  background: #f8b195;
 }
 /* Flips card */
 /* .card{
@@ -36,56 +36,66 @@ body {
 .back{
     background-color:#99D9E9;
 } */
-.test{
-    width:180px;
-    height:240px;
-    border:1px solid #151718;
-    float:left;
-    margin-right:50px;
-    margin-bottom:5px;
-    border-radius:2px;
-    font-family:courier;
-    cursor:pointer;
-    text-align: center;
-    background: white
+.test {
+  width: 13%;
+  height: 240px;
+  border: 1px solid #151718;
+  float: left;
+  margin-right: 50px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  font-family: courier;
+  cursor: pointer;
+  text-align: center;
+  background: white;
 }
 
 .placeholder {
-    width:180px;
-    height:240px;
-    position: relative;
-    background-color: lightgray;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    float: left;
-    text-align: center;
-    transition: all .2s ease-in-out; 
+  width: 30%;
+  height: 240px;
+  position: relative;
+  background-color: lightgray;
+  margin: 1.5%;
+  float: left;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
 }
 .placeholder:hover {
-    transform: scale(1.1); 
+  transform: scale(1.1);
 }
 .deck {
-    width:180px;
-    height:240px;
-    float: right;
-    background-color: lightskyblue;
-    transition: all .2s ease-in-out; 
+  width: 13%;
+  height: 240px;
+  float: right;
+  background-color: lightskyblue;
+  transition: all 0.2s ease-in-out;
 }
 .deck:hover {
-    transform: scale(1.1); 
+  transform: scale(1.1);
 }
 .inplay {
-    width:600px;
-    height:260px;
-    /* float:left; */
-    background-color: white;
-    border: black 2px;
+  width: 45%;
+  min-height: 260px;
+  /* float:left; */
+  background-color: white;
+  border: black 2px;
+  margin: 2%;
+  padding: 2%;
 }
-.cardspot {
-    width: 180px;
-    height: 240px;
-    background-color: lightslategray;
-    float: left;
-    margin:10px;
-    /* display: inline; */
+.hand {
+  width: 45%;
+  height: 260px;
+  /* float:left; */
+  background-color: darkslategrey;
+  border: black 2px;
+  margin: 2%;
+  padding: 2%;
 }
+/*.cardspot {
+  width: 30%;
+  height: 240px;
+  background-color: lightslategray;
+  float: left;
+  margin: 10px;
+  /* display: inline; 
+} */
