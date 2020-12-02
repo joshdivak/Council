@@ -36,6 +36,8 @@ body {
 .back{
     background-color:#99D9E9;
 } */
+
+/* percent = scalable, px = not scalable */
 .test {
   width: 13%;
   height: 240px;
@@ -75,7 +77,7 @@ body {
 }
 .inplay {
   width: 45%;
-  min-height: 260px;
+  height: 260px;
   /* float:left; */
   background-color: white;
   border: black 2px;

@@ -1,3 +1,4 @@
+<!-- The index creates the elements you see, formatting done by style.css -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -32,6 +33,8 @@
     <!-- Manages the player's hand -->
         <h2>Your Hand</h2>
         <div class="hand" style="float: left; padding-top: 20px;">
+            <!-- When you click a card, it will call the "playCard" function -->
+            <!-- The object that is the card will move to the in play area -->
             <div class="placeholder" id='p1' onclick="playCard(this)">
                 <p id="card1"></p>
             </div>
