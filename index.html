@@ -25,25 +25,19 @@
     <h2>In Play</h2>
     <div class="inplay" id="inplay"></div>
 
-    <!-- Click on the deck to draw a card -->
-    <div class="deck" onclick="dealCard()">
-      <p style="text-align: center;">DRAW CARD</p>
-  </div>
+    <!-- Click on the deck to draw a card from appropriate deck -->
+    <div id="deckcontainer">
+        <div class="deck" id="act" onclick="drawCard('act')">
+            <p style="text-align: center;">DRAW ACT</p>
+        </div>
+        <div class="deck" id="support" onclick="drawCard('support')">
+            <p style="text-align: center;">DRAW SUPPORT</p>
+        </div>
+    </div>
 
     <!-- Manages the player's hand -->
         <h2>Your Hand</h2>
-        <div class="hand" style="float: left; padding-top: 20px;">
-            <!-- When you click a card, it will call the "playCard" function -->
-            <!-- The object that is the card will move to the in play area -->
-            <div class="placeholder" id='p1' onclick="playCard(this)">
-                <p id="card1"></p>
-            </div>
-            <div class="placeholder" id='p2' onclick="playCard(this)">
-                <p id="card2"></p>
-            </div>
-            <div class="placeholder" id='p3' onclick="playCard(this)">
-                <p id="card3"></p>
-            </div>
+        <div class="hand" id='hand' style="float: left; padding-top: 20px;">
         </div>
         <script src="main.js"></script>
     </body>

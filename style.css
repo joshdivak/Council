@@ -38,7 +38,7 @@ body {
 } */
 
 /* percent = scalable, px = not scalable */
-.test {
+/* .test {
   width: 13%;
   height: 240px;
   border: 1px solid #151718;
@@ -50,9 +50,9 @@ body {
   cursor: pointer;
   text-align: center;
   background: white;
-}
+} */
 
-.placeholder {
+.card {
   width: 30%;
   height: 240px;
   position: relative;
@@ -62,7 +62,7 @@ body {
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
-.placeholder:hover {
+.card:hover {
   transform: scale(1.1);
 }
 .deck {
@@ -71,6 +71,7 @@ body {
   float: right;
   background-color: lightskyblue;
   transition: all 0.2s ease-in-out;
+  margin: 10px;
 }
 .deck:hover {
   transform: scale(1.1);
@@ -93,11 +94,3 @@ body {
   margin: 2%;
   padding: 2%;
 }
-/*.cardspot {
-  width: 30%;
-  height: 240px;
-  background-color: lightslategray;
-  float: left;
-  margin: 10px;
-  /* display: inline; 
-} */
