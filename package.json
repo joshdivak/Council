@@ -1,0 +1,24 @@
+{
+  "name": "Council",
+  "version": "1.0.0",
+  "description": "Council code",
+  "main": "main.js",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshdivak/Council.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshdivak/Council/issues"
+  },
+  "homepage": "https://github.com/joshdivak/Council#readme"
+}

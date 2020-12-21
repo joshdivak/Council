@@ -84,6 +84,7 @@ body {
   border: black 2px;
   margin: 2%;
   padding: 2%;
+  overflow: auto;
 }
 .hand {
   width: 45%;
@@ -93,4 +94,5 @@ body {
   border: black 2px;
   margin: 2%;
   padding: 2%;
+  overflow: auto;
 }
