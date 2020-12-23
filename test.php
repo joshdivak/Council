@@ -21,5 +21,6 @@
 	echo "<html><head></head><body><p>";
     echo $ID . " " . $NAME;
     echo "<script src=test.js></script>";
+    echo "<script>console.log($ID)</script>";
 	echo "</p></body></html>";
 ?>
