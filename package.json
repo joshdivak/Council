@@ -1,0 +1,24 @@
+{
+  "name": "council",
+  "version": "1.0.0",
+  "description": "Council game with mysql",
+  "main": "database_connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshdivak/Council.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshdivak/Council/issues"
+  },
+  "homepage": "https://github.com/joshdivak/Council#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "node": "^15.4.0"
+  }
+}
