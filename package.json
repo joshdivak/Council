@@ -4,6 +4,7 @@
   "description": "Council code",
   "main": "main.js",
   "dependencies": {
+    "jquery-csv": "^1.0.11",
     "mysql": "^2.18.1"
   },
   "devDependencies": {},
