@@ -3,6 +3,48 @@
 // let player1 = [];
 // let player2 = [];
 
+//create map for key issue # to shorthand
+//also need one for corresponding icons
+var keyDict = {
+
+    1: "Police",
+ 
+    2: "Courts",
+ 
+    3: "Alternatives",
+ 
+    4: "Conditions",
+ 
+    5: "Re-Entry",
+    
+    6: "Juvenile",
+
+    7: "Race",
+
+    8: "Crime"
+ 
+ };
+
+ var iconDict = {
+
+    1: "gavel.png",
+ 
+    2: "gavel.png",
+ 
+    3: "Alternatives",
+ 
+    4: "Conditions",
+ 
+    5: "Re-Entry",
+    
+    6: "Juvenile",
+
+    7: "Race",
+
+    8: "Crime"
+ 
+ };
+ 
 function cardObj(phase, title, key1){
     this.phase = phase;
     this.title = title;
@@ -71,11 +113,18 @@ function drawCard(cardtype) {
         let destination = document.getElementById('inplay'); //sets destination to inplay container
         destination.appendChild(card); //adds clicked card to inplay
     });
-    const para = document.createElement("P");
+    const para = document.createElement("h2");
+    para.classList.add('cardTitle');
     const para2 = document.createElement("P");
+    const icon = document.createElement("img");
+    icon.classList.add('cardIcon');
+    const icon2 = document.createElement("img");
+    icon2.classList.add('cardIcon');
     if (cardtype === "act") {
         var title = actcards[0].title;
-        var text = actcards[0].key1;
+        var text = keyDict[actcards[0].key1];
+        icon.src = iconDict[actcards[0].key1];
+        icon2.src = "gavel.png";
     }
     else {
         var title = randomCard(supportcards);
@@ -84,6 +133,8 @@ function drawCard(cardtype) {
     para2.innerHTML = text;
     card.appendChild(para);
     card.appendChild(para2);
+    card.appendChild(icon);
+    card.appendChild(icon2);
     hand.appendChild(card);
 }
 
