@@ -1,7 +1,9 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-    host:'flexdecks.gametrainlearning.org',
+    //host:'flexdecks.gametrainlearning.org',
+    host: 'localhost',
+    //port: 3306,
     database:'gametrai_flexdecks',
     user: 'gametrai_megan',
     password:'play2learn',
