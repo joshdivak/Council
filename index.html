@@ -36,9 +36,23 @@
     </div>
 
     <!-- Manages the player's hand -->
-        <h2>Your Hand</h2>
-        <div class="hand" id='hand' style="float: left; padding-top: 20px;">
+    <div id="hands">
+        <h2 class="activeplayer" id="header1">Player 1 Hand</h2>
+        <div class="hand" id="hand1" style="padding-top: 20px;">
+            <div class="turnoptions">
+                <button class="options" onclick="changeTurn()">Pass</button>
+                <button class="options">Trade</button>
+            </div>
         </div>
+        
+        <h2 id="header2">Player 2 Hand</h2>
+        <div class="hand" id="hand2" style="padding-top: 20px;">
+            <div class="turnoptions">
+                <button class="options" onclick="changeTurn()">Pass</button>
+                <button class="options">Trade</button>
+            </div>
+        </div>
+    </div>
         <script src="main.js"></script>
     </body>
 </html>

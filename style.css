@@ -77,10 +77,21 @@ body {
 .deck:hover {
   transform: scale(1.1);
 }
+.activeplayer {
+  background-color: green;
+  width: 150px;
+}
+.turnoptions {
+  background-color: darkgray;
+  float: right;
+}
+.options {
+  background-color: lightgray;
+  padding: 15px;
+}
 .inplay {
   width: 45%;
   height: 260px;
-  /* float:left; */
   background-color: white;
   border: black 2px;
   margin: 2%;
@@ -90,13 +101,9 @@ body {
 .hand {
   width: 45%;
   height: 260px;
-  /* float:left; */
   background-color: darkslategrey;
   border: black 2px;
   margin: 2%;
   padding: 2%;
-<<<<<<< HEAD
-=======
   overflow: auto;
->>>>>>> a23f5b42eddaf4cdfe831c92d733245a4f41b4e6
 }

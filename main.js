@@ -3,7 +3,16 @@
 // let player1 = [];
 // let player2 = [];
 
-let actcards = ['ACT1','ACT2','ACT3','ACT4','ACT5','ACT6'];
+function cardObj(phase, title, key1){
+    this.phase = phase;
+    this.title = title;
+    this.key1 = key1;
+}
+
+let ACT1 = new cardObj(1, 'Civilian-Led Crisis Response', 1);
+console.log(ACT1.title)
+
+let actcards = [ACT1];
 let supportcards = ['SUPPORT1','SUPPORT2','SUPPORT3','SUPPORT4','SUPPORT5','SUPPORT6'];
 let cardsdealt = [];
 let player1 = [];
@@ -54,6 +63,7 @@ function randomCard(cardtype) {
     return cardtype[rand];
 }
 
+let player = 2;
 function drawCard(cardtype) {
     //creates div called 'card' of class 'placeholder' with onclick function
     const card = document.createElement('div');
@@ -63,14 +73,50 @@ function drawCard(cardtype) {
         destination.appendChild(card); //adds clicked card to inplay
     });
     const para = document.createElement("P");
+    const para2 = document.createElement("P");
     if (cardtype === "act") {
-        var text = randomCard(actcards);
+        var title = actcards[0].title;
+        var text = actcards[0].key1;
     }
     else {
-        var text = randomCard(supportcards);
+        var title = randomCard(supportcards);
     }
-    para.innerHTML = text;
+    para.innerHTML = title;
+    para2.innerHTML = text;
     card.appendChild(para);
+    card.appendChild(para2);
+    if (document.getElementById('header1').className == 'activeplayer') {
+        hand = document.getElementById('hand1');
+    }
+    else {
+        hand = document.getElementById('hand2');
+    }
     hand.appendChild(card);
 }
 
+let num=1;
+function changeTurn() {
+    if (num == 1) {
+        element = document.getElementById('header'+num);
+        element.classList.remove('activeplayer');
+        num = num + 1;
+        element = document.getElementById('header'+num);
+        element.classList.add('activeplayer');
+    }
+    else {
+        element = document.getElementById('header'+num);
+        element.classList.remove('activeplayer');
+        num = num - 1;
+        element = document.getElementById('header'+num);
+        element.classList.add('activeplayer');
+    }
+    
+}
+
+/* using jquery-csv to convert csv to 2D array
+import csv from './jquery.csv.js';
+var csvFile = new XMLHttpRequest();
+csvFile.open("GET", "legislate.csv", true);
+var data = csvFile.csv.toArrays(csv);
+console.log(data);
+*/
