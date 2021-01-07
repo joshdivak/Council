@@ -15,19 +15,21 @@
         }
 
         //Execute query
-        $query = "SELECT Cards.* FROM Cards ORDER BY ID";
+        $query = "SELECT * FROM `TABLE 1`";
         $qry_result = mysqli_query($con,$query);
 
         $row = mysqli_fetch_array($qry_result);
-        $ID = $row['ID'];
-        $NAME = $row['CardDescription'];
+        $TITLE = $row['Title'];
+        $CONTENT = $row['Content'];
         
-        echo $ID . " " . $NAME;
-        echo "<script>console.log($ID)</script>";
+        echo $TITLE . " " . $CONTENT;
     ?>
     <p>hello<?php echo $row['CardType'] ?></p>
-    <script src=test.js>js_ID = "<?php echo $ID; ?>";
-        console.log(js_ID);
-        console.log(convert(js_ID));</script>
+    <script type="text/javascript">
+        console.log("running script");
+        // pass PHP variable declared above to JavaScript variable
+        var ar = <?php echo json_encode($row) ?>;
+        console.log(ar);
+    </script>
     </body>
 </html>
