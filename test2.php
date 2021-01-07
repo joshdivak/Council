@@ -14,22 +14,37 @@
         exit();
         }
 
-        //Execute query
+        //Execute query (selects all data)
         $query = "SELECT * FROM `TABLE 1`";
         $qry_result = mysqli_query($con,$query);
+        $len = mysqli_num_rows($qry_result);
 
-        $row = mysqli_fetch_array($qry_result);
-        $TITLE = $row['Title'];
-        $CONTENT = $row['Content'];
+        echo "<b></b>";
+
+        //make array of cards
+        $cards = array();
+        for ($i = 0; $i < $len; $i++){
+            $row = mysqli_fetch_array($qry_result, MYSQLI_NUM);
+            $cards[] = $row;
+        }
         
-        echo $TITLE . " " . $CONTENT;
+        //visualize what is in the array
+        for ($r = 0; $r < $len; $r++) {
+            echo "<p><b>Row number $r</b></p>";
+            echo "<ul>";
+            for ($col = 0; $col < 4; $col++) {
+              echo "<li>".$cards[$r][$col]."</li>";
+            }
+            echo "</ul>";
+          }
+        
     ?>
-    <p>hello<?php echo $row['CardType'] ?></p>
+    <p>hello <?php echo $cards[0][0]; ?> </p>
     <script type="text/javascript">
         console.log("running script");
-        // pass PHP variable declared above to JavaScript variable
-        var ar = <?php echo json_encode($row) ?>;
-        console.log(ar);
+        //pass PHP variable declared above to JavaScript variable
+        let cards = <?php echo json_encode($cards) ?>;
+        console.log(cards);
     </script>
     </body>
 </html>
