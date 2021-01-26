@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Council</h1>
+    <h1 style="display: inline-block;">Council</h1>
+    <button onclick="createAlert('Round One')">Start Game</button>
     <br />
     <!-- Flips card (along with css) -->
     <!-- <div class='card'>
@@ -24,6 +25,19 @@
     <!-- Where played cards move to -->
     <h2>In Play</h2>
     <div class="inplay" id="inplay"></div>
+    <div id="keyissues" style="float: right; width: 40%;">
+        <h1>Key issues</h1>
+        <ul>
+            <li>1: Police brutality and alternatives to policing</li>
+            <li>2: Trials: sentencing, pre-trial detention, and false convictions</li>
+            <li>3: Alternatives to imprisonment</li>
+            <li>4: Prison conditions</li>
+            <li>5: Parole, probation, and re-entry</li>
+            <li>6: Juvenile system</li>
+            <li>7: Racial equity</li>
+            <li>8: Crime and Recidivism</li>
+        </ul>
+    </div>
 
     <!-- Click on the deck to draw a card from appropriate deck -->
     <div id="deckcontainer">
@@ -47,6 +61,14 @@
         
         <h2 id="header2">Player 2 Hand</h2>
         <div class="hand" id="hand2" style="padding-top: 20px;">
+            <div class="turnoptions">
+                <button class="options" onclick="changeTurn()">Pass</button>
+                <button class="options">Trade</button>
+            </div>
+        </div>
+
+        <h2 id="header3">Player 3 Hand</h2>
+        <div class="hand" id="hand3" style="padding-top: 20px;">
             <div class="turnoptions">
                 <button class="options" onclick="changeTurn()">Pass</button>
                 <button class="options">Trade</button>

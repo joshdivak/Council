@@ -137,8 +137,11 @@ function drawCard(cardtype) {
     if (document.getElementById('header1').className == 'activeplayer') {
         hand = document.getElementById('hand1');
     }
-    else {
+    else if (document.getElementById('header2').className == 'activeplayer') {
         hand = document.getElementById('hand2');
+    }
+    else if (document.getElementById('header3').className == 'activeplayer') {
+        hand = document.getElementById('hand3');
     }
     hand.appendChild(card);
 }
@@ -152,14 +155,23 @@ function changeTurn() {
         element = document.getElementById('header'+num);
         element.classList.add('activeplayer');
     }
-    else {
+    else if (num == 2) {
         element = document.getElementById('header'+num);
         element.classList.remove('activeplayer');
-        num = num - 1;
+        num = num + 1;
         element = document.getElementById('header'+num);
         element.classList.add('activeplayer');
     }
-    
+    else if (num == 3) {
+        element = document.getElementById('header'+num);
+        element.classList.remove('activeplayer');
+        num = num + 1;
+        createAlert('Now that everyone has drawn cards, click on an act card that you want to propose');
+    }
+}
+
+function createAlert(text) {
+    alert(text);
 }
 
 /* using jquery-csv to convert csv to 2D array

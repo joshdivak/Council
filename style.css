@@ -80,6 +80,7 @@ body {
   width: 13%;
   height: 240px;
   float: right;
+  position: relative;
   background-color: lightskyblue;
   transition: all 0.2s ease-in-out;
   margin: 10px;
@@ -106,6 +107,8 @@ body {
   border: black 2px;
   margin: 2%;
   padding: 2%;
+  /* float: left; */
+  display: inline-block;
   overflow: auto;
 }
 .hand {
@@ -116,4 +119,8 @@ body {
   margin: 2%;
   padding: 2%;
   overflow: auto;
+}
+
+.keyissues {
+  width:20%;
 }
